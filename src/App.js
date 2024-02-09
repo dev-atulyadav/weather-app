@@ -33,8 +33,9 @@ export default function App() {
       .then((json) => setCities(json));
   }
   async function apiCall(name) {
+    let apiKey = "You API key"
     fetch(
-      "http://api.weatherapi.com/v1/forecast.json?key=a27921eefd7144c78ec212012241201&q=" +
+      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=` +
         name +
         "&days=7"
     )
