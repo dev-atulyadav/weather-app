@@ -1,13 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-blue-300
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+nav ul li {
+  @apply px-4 py-2 rounded-lg hover:bg-blue-200 hover:text-black cursor-pointer;
+}
+.icon {
+  padding: 0.7rem;
+  background-image: url("./images/house.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  position: absolute;
+  left: 1.1rem;
+  z-index: 2;
+}
+.bg-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("https://images.pexels.com/photos/5439/earth-space.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("https://source.unsplash.com/1600x900/?thunder");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.6;
+  z-index: -1;
+}
+.pattern {
+  width: 40rem;
+  height: 40rem;
+  opacity: 0.8;
+  padding: 6rem;
+  background-image: url("../src/images/pattern.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(20deg);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header {
+    border-radius: 0 !important;
+  }
+  .xsm {
+    display: none;
+  }
+  .xsm-form {
+    width: 100%;
+    flex-direction: column;
+  }
+  .xsm-form input {
+    height: 3rem;
+  }
+  .xsm-section {
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 3rem;
+  }
+  .xsm-section article main h2 {
+    font-size: 2rem !important;
+  }
+  .xsm-section img {
+    background: #00000037;
+    border-radius: 50%;
+    height: 16rem;
+  }
+  .xsm-article {
+    height: auto;
+    width: 95%;
+  }
+  .xsm-div {
+    height: 4rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: auto;
+    align-content: space-between;
+  }
+  .xsm-loader {
+    top: 8rem;
+  }
+  .xsm-section button {
+    width: 8rem;
+    height: 3rem;
+  }
+  .pattern {
+    display: none;
+  }
+  .close{
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 780px) {
+  .xsm {
+    display: none;
+  }
+  .xsm-form {
+    width: 80%;
+    flex-direction: column;
+  }
+  .xsm-form input {
+    height: 3rem;
+  }
+  .xsm-section {
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 3rem;
+  }
+  .xsm-section img {
+    background: #00000037;
+    border-radius: 50%;
+    height: 16rem;
+  }
+  .xsm-article {
+    height: auto;
+    width: 95%;
+  }
+  .xsm-loader {
+    top: 8rem;
+  }
+  .xsm-section button {
+    width: 8rem;
+    height: 3rem;
+  }
+  .pattern {
+    display: none;
+  }
 }
