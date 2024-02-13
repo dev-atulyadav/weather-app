@@ -5,6 +5,9 @@ I have created it by using the following technologies mentioned below. I have cr
 1. React JS
 2. Tailwind CSS
 3. Fetch API
+# API details
+I have api provided by https://www.weatherapi.com/
+You can register and use your API for free.
 # How to use this web app:-
 1. To use it just clone it with `git clone "https://github.com/dev-atulyadav/weather-app"`
 2. Then install node modules and run by using `npm start`
