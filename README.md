@@ -7,7 +7,7 @@ I have created it by using the following technologies mentioned below. I have cr
 3. Fetch API
 # API details
  >I have api provided by https://www.weatherapi.com/
-
+>
  >You can register and use your API for free.
 # How to use this web app:-
 1. To use it just clone it with `git clone "https://github.com/dev-atulyadav/weather-app"`
