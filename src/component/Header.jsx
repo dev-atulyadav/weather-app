@@ -8,8 +8,6 @@ export default function Header() {
         <img src={Logo} className="inline-block h-16" alt="" />
         <h3 className="font-bold text-2xl">WeatherInfo.in</h3>
       </div>
-      <nav>
-      </nav>
     </header>
   );
 }

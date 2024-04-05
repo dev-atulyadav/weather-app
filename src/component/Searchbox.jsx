@@ -98,11 +98,11 @@ export default function Searchbox({
     }
   };
   const handleHourForecast = (hrsforecast) => {
-    return hrsforecast.map((value) => {
+    return hrsforecast.map((value, index) => {
       let time = value.time.split(" ")[1];
       let temp_c = value.temp_c;
       return (
-        <span className="flex justify-center items-center flex-col">
+        <span key={index} className="flex justify-center items-center flex-col">
           <small className="text-sm">{temp_c}°</small>
           <p>{time}</p>
         </span>
@@ -135,13 +135,13 @@ export default function Searchbox({
 
   const handleDaysForecast = (daysforecast) => {
     let day = +new Date().toDateString().split(" ")[2];
-    return daysforecast.map((value) => {
+    return daysforecast.map((value, index) => {
       let maxtemp_c = value.day.maxtemp_c;
       let mintemp_c = value.day.mintemp_c;
       let today = +value.date.split("-")[2] == day ? "Today" : value.date;
 
       return (
-        <span className="flex justify-center items-center flex-col">
+        <span key={index} className="flex justify-center items-center flex-col">
           <p className="font-semibold text-sm">{today}</p>
           <div className="flex font-semibold text-sm">
             <small>{maxtemp_c}°</small>
@@ -166,7 +166,6 @@ export default function Searchbox({
       </button>
       <form
         autoComplete="off"
-        action=""
         className="xsm-form w-[80%] flex items-center gap-4"
       >
         <div className="relative  h-full w-full flex justify-center items-center">
